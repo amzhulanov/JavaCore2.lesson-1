@@ -8,6 +8,8 @@ public class Dog extends Animal implements Participant {
     private boolean isOnDistance;
     private int runDistance;
     private int jumpHeight;
+    private String vowel="аояуеию"; //строка с глассными буквами для определения пола животного
+    private boolean gender; //для определения пола животного
 
 
     public Dog(String name, Color color, int age, int runDistance, int jumpHeight) {
@@ -39,9 +41,19 @@ public class Dog extends Animal implements Participant {
         }
         if (distance > runDistance) {
             isOnDistance = false;
+            if (gender){
+                System.out.println(String.format("Собака %s не хватило сил пробежать %d и она снимается с соревнований. На прошлых соревнованиях она достигла отметки %d", getName(), distance,runDistance));
+            }else{
+                System.out.println(String.format("Псу %s не хватило сил пробежать %d и он снимается с соревнований. На прошлых соревнованиях он достиг отметки %d", getName(), distance,runDistance));
+            }
             return;
         }
-        System.out.println(String.format("Собака %s пробежала кросс длинной %d", getName(), distance));
+        //Если последний символ из имени животного гласный, то женский род.
+        if (gender) {
+            System.out.println(String.format("Собака %s пробежала кросс длинной %d. Её личный рекорд %d", getName(), distance,runDistance));
+        }else {
+            System.out.println(String.format("Пём %s пробежал кросс длинной %d. Его личный рекорд %d", getName(), distance,runDistance));
+        }
     }
 
     @Override
@@ -51,9 +63,18 @@ public class Dog extends Animal implements Participant {
         }
         if (height > jumpHeight) {
             isOnDistance = false;
+            if (gender) {
+                System.out.println(String.format("Собака %s не смогла взять высоту %d и она снимается с соревнований" , getName(), height));
+            }else {
+                System.out.println(String.format("Пёс %s не смог взять высоту %d и он снимается с соревнований" , getName(), height));
+            }
             return;
         }
-        System.out.println(String.format("Собака %s прыгнула на высоту %d", getName(), height));
+        if (gender) {
+            System.out.println(String.format("Собака %s прыгнула на высоту %d. Её личный рекорд %d", getName(), height, jumpHeight));
+        }else {
+            System.out.println(String.format("Пёс %s прыгнул на высоту %d. Его личный рекорд %d", getName(), height, jumpHeight));
+        }
     }
 
     @Override
@@ -63,8 +84,17 @@ public class Dog extends Animal implements Participant {
         }
         if (distance > runDistance) {
             isOnDistance = false;
+            if (gender) {
+                System.out.println(String.format("Собака %s не кошка, но всё равно не смогла проплыть %d и снимается с соревнований.",getName(),distance));
+            }else{
+                System.out.println(String.format("Пёс %s не кот, но всё равно не смог проплыть %d и снимается с соревнований.",getName(),distance));
+            }
             return;
         }
-        System.out.println(String.format("Собака %s проплыла расстояние в %d км", getName(), distance));
+        if (gender) {
+            System.out.println(String.format("Собака %s не кошка и смогла проплыть %d. Её личный рекорд %d.",getName(),distance,runDistance));
+        }else{
+            System.out.println(String.format("Пёс %s не кот и смог проплыть %d. Его личный рекорд %d.",getName(),distance,runDistance));
+        }
     }
 }
