@@ -46,9 +46,9 @@ public class Cat extends Animal implements Participant {
         if (distance > runDistance) {
             isOnDistance = false;
             if (gender) {
-                System.out.println(String.format("Кошке %s не хватило сил пробежать %d. На прошлых соревнованиях она достигла отметки %d", getName(), distance, runDistance));
+                System.out.println(String.format("Кошке %s не хватило сил пробежать %d и она снимается с соревнований. На прошлых соревнованиях она достигла отметки %d", getName(), distance, runDistance));
             }else{
-                System.out.println(String.format("Коту %s не хватило сил пробежать %d. На прошлых соревнованиях он достиг отметки %d", getName(), distance, runDistance));
+                System.out.println(String.format("Коту %s не хватило сил пробежать %d и он снимается с соревнований. На прошлых соревнованиях он достиг отметки %d", getName(), distance, runDistance));
             }
             return;
         }
@@ -70,9 +70,9 @@ public class Cat extends Animal implements Participant {
         if (height > jumpHeight) {
             isOnDistance = false;
             if (gender) {
-                System.out.println(String.format("Кошка %s не смогла взять высоту %d", getName(), height));
+                System.out.println(String.format("Кошка %s не смогла взять высоту %d и она снимается с соревнований" , getName(), height));
             }else {
-                System.out.println(String.format("Кот %s не смог взять высоту %d", getName(), height));
+                System.out.println(String.format("Кот %s не смог взять высоту %d и он снимается с соревнований" , getName(), height));
             }
             return;
         }
@@ -89,9 +89,9 @@ public class Cat extends Animal implements Participant {
     public void swim(int distance) {
         isOnDistance = false;
         if (gender) {
-            System.out.println("Кошка не умеет плавать");
+            System.out.println("Кошка не умеет плавать и снимается с соревнований.");
         }else{
-            System.out.println("Кот не умеет плавать");
+            System.out.println("Кот не умеет плавать и снимается с соревнований.");
         }
         // throw new UnsupportedOperationException("Кошка не умеет плавать");
     }
