@@ -1,6 +1,7 @@
 package Java.ru.geekbrains.lesson1.animal;
 
 import Java.ru.geekbrains.lesson1.Participant;
+import Java.ru.geekbrains.lesson1.Team;
 import Java.ru.geekbrains.lesson1.enums.Color;
 
 public class Cat extends Animal implements Participant {
@@ -75,6 +76,7 @@ public class Cat extends Animal implements Participant {
             System.out.println(String.format("Кот %s прыгнул на высоту %d. Его личный рекорд %d", getName(), height, jumpHeight));
         }
 
+
         }
 
 
@@ -91,5 +93,14 @@ public class Cat extends Animal implements Participant {
 
     public void setRunDistance(int runDistance) {
         this.runDistance = runDistance;
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "isOnDistance=" + isOnDistance +
+                ", runDistance=" + runDistance +
+                ", jumpHeight=" + jumpHeight +
+                '}';
     }
 }
