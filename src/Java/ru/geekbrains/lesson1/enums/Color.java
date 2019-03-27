@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson1.enums;
+package Java.ru.geekbrains.lesson1.enums;
 
 public enum Color {
     WHITE("Белый"),
