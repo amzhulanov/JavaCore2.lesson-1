@@ -94,4 +94,13 @@ public class Dog extends Animal implements Participant {
             System.out.println(String.format("Пёс %s не кот и смог проплыть %d. Его личный рекорд %d.",getName(),distance,runDistance));
         }
     }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "isOnDistance=" + isOnDistance +
+                ", runDistance=" + runDistance +
+                ", jumpHeight=" + jumpHeight +
+                '}';
+    }
 }
