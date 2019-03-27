@@ -10,8 +10,11 @@ public class Dog extends Animal implements Participant {
     private int jumpHeight;
 
 
-    public Dog(String name, Color color, int age) {
+    public Dog(String name, Color color, int age, int runDistance, int jumpHeight) {
         super(name, color, age);
+        this.isOnDistance=true;
+        this.runDistance=runDistance;
+        this.jumpHeight=jumpHeight;
     }
 
     public Dog(String name, Color color) {
