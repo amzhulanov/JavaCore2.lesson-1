@@ -1,16 +1,13 @@
-package ru.geekbrains.lesson1.animal;
+package Java.lesson1.animal;
 
-import ru.geekbrains.lesson1.Participant;
-import ru.geekbrains.lesson1.enums.Color;
+import Java.lesson1.Participant;
+import Java.lesson1.enums.Color;
 
 public class Dog extends Animal implements Participant {
 
     private boolean isOnDistance;
     private int runDistance;
     private int jumpHeight;
-    private String vowel="аояуеию"; //строка с глассными буквами для определения пола животного
-    private boolean gender; //для определения пола животного
-
 
     public Dog(String name, Color color, int age, int runDistance, int jumpHeight) {
         super(name, color, age);
@@ -52,7 +49,7 @@ public class Dog extends Animal implements Participant {
         if (gender) {
             System.out.println(String.format("Собака %s пробежала кросс длинной %d. Её личный рекорд %d", getName(), distance,runDistance));
         }else {
-            System.out.println(String.format("Пём %s пробежал кросс длинной %d. Его личный рекорд %d", getName(), distance,runDistance));
+            System.out.println(String.format("Пёс %s пробежал кросс длинной %d. Его личный рекорд %d", getName(), distance,runDistance));
         }
     }
 

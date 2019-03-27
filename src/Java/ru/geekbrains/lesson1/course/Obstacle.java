@@ -1,6 +1,6 @@
-package ru.geekbrains.lesson1.course;
+package Java.lesson1.course;
 
-import ru.geekbrains.lesson1.Participant;
+import Java.lesson1.Participant;
 
 /**
  * Класс абстрактное препятствие

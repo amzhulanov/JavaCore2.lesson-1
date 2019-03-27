@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson1;
+package Java.lesson1;
 
 /**
  * Класс - комманда участников соревнований

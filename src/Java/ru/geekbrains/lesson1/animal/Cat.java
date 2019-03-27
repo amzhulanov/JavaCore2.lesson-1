@@ -1,28 +1,21 @@
-package ru.geekbrains.lesson1.animal;
+package Java.lesson1.animal;
 
-import ru.geekbrains.lesson1.Participant;
-import ru.geekbrains.lesson1.enums.Color;
+import Java.lesson1.Participant;
+import Java.lesson1.enums.Color;
 
 public class Cat extends Animal implements Participant {
 
     private boolean isOnDistance;
     private int runDistance;
     private int jumpHeight;
-    private String vowel="аояуеию"; //строка с глассными буквами для определения пола животного
-    private boolean gender; //для определения пола животного
+
 
     public Cat(String name, Color color, int age, int runDistance, int jumpHeight) {
         super(name, color, age);
         this.isOnDistance = true;
         this.runDistance = runDistance;
         this.jumpHeight = jumpHeight;
-
-        if (vowel.indexOf((getName().charAt(getName().length()-1)))>=0) {
-            gender=true;
-        }else {
-            gender=false;
-        }
-    }
+     }
 
     public Cat(String name, Color color) {
         super(name, color, 0);

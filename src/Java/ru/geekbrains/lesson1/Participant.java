@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson1;
+package Java.lesson1;
 
 /**
  * Интерфейс - участник соревнований
@@ -12,4 +12,6 @@ public interface Participant {
     void jump(int height);
 
     void swim(int distance);
+
+    void voice(int voice);
 }

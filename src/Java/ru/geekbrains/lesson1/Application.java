@@ -1,12 +1,12 @@
-package ru.geekbrains.lesson1;
+package Java.lesson1;
 
-import ru.geekbrains.lesson1.animal.Cat;
-import ru.geekbrains.lesson1.animal.Dog;
-import ru.geekbrains.lesson1.course.Course;
-import ru.geekbrains.lesson1.course.Cross;
-import ru.geekbrains.lesson1.course.Wall;
-import ru.geekbrains.lesson1.course.Water;
-import ru.geekbrains.lesson1.enums.Color;
+import Java.lesson1.animal.Cat;
+import Java.lesson1.animal.Dog;
+import Java.lesson1.course.Course;
+import Java.lesson1.course.Cross;
+import Java.lesson1.course.Wall;
+import Java.lesson1.course.Water;
+import Java.lesson1.enums.Color;
 
 /**
  * Класс для запуска приложения - симулятор кросса
@@ -16,8 +16,8 @@ public class Application {
     public static void main(String[] args) {
         Team team = new Team(
                 new Cat("Барсик", Color.BLACK, 1, 100, 5),
-                new Cat("Барсик", Color.BLACK, 1, 80, 12),
-                new Dog("Дружок", Color.BLACK,5,150,3)
+                new Cat("Мурка", Color.BLACK, 1, 80, 12),
+                new Dog("Дружок", Color.BLACK,5,150,15)
 
 
                 // TODO здесь должны быть участники всех видов (Cat, Dog, Human, Robot)
@@ -26,8 +26,9 @@ public class Application {
         Course course = new Course(
                 new Cross(50),
                 new Wall(10),
-                new Cross(90),
-                new Water(5)
+                new Water(5),
+                new Voice()
+
         );
 
         course.doIt(team);

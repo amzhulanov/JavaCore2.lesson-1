@@ -1,6 +1,6 @@
-package ru.geekbrains.lesson1.animal;
+package Java.lesson1.animal;
 
-import ru.geekbrains.lesson1.Participant;
+import Java.lesson1.Participant;
 
 /**
  * Робот не является животным, но может учавствовать в соревнованиях
