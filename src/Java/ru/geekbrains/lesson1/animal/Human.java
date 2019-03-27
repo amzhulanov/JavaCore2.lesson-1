@@ -8,10 +8,10 @@ public class Human extends Animal implements Participant {
     private boolean isOnDistance;
     private int runDistance;
     private int jumpHeight;
-    private int powerVoice;
 
-    public Human(String name, Color color, int age, int voice) {
-        super(name, color, age,voice);
+
+    public Human(String name, Color color, int age) {
+        super(name, color, age);
     }
 
     public Human(String name, Color color) {
@@ -26,6 +26,8 @@ public class Human extends Animal implements Participant {
     @Override
     public void run(int distance) {
         if (!isOnDistance) {
+
+             System.out.println("Человек не соревнуется в беге  с животными");
             return;
         }
         if (distance > runDistance) {
@@ -48,7 +50,7 @@ public class Human extends Animal implements Participant {
     @Override
     public void jump(int height) {
         if (!isOnDistance) {
-
+            System.out.println("Человек не соревнуется в прыжках  с животными и снимается с соревнований");
             return;
         }
         if (height > jumpHeight) {
@@ -69,6 +71,10 @@ public class Human extends Animal implements Participant {
 
     @Override
     public void swim(int distance) {
+        if (!isOnDistance) {
+            System.out.println("Человек не соревнуется с животными в воде  и снимается с соревнований");
+            return;
+        }
         if (distance > runDistance) {
             isOnDistance = false;
             if (gender) {
@@ -86,20 +92,16 @@ public class Human extends Animal implements Participant {
     }
 
     @Override
-    public void voice(int voice) {
-        if (voice > powerVoice) {
-            isOnDistance = false;
-            if (gender) {
-                System.out.println(String.format("Участница %s не смогла проплыть %d и снимается с соревнований.",getName(),voice));
-            }else{
-                System.out.println(String.format("Участник %s не смог проплыть %d и снимается с соревнований.",getName(),voice));
-            }
-            return;
-        }
-        if (gender) {
-            System.out.println(String.format("Участница %s проплыла %d. Её личный рекорд %d.",getName(),voice,powerVoice));
-        }else{
-            System.out.println(String.format("Участник %s проплыл %d. Его личный рекорд %d.",getName(),voice,powerVoice));
-        }
+    public void voice() {
+        System.out.println("Здравствуйте");
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "isOnDistance=" + isOnDistance +
+                ", runDistance=" + runDistance +
+                ", jumpHeight=" + jumpHeight +
+                '}';
     }
 }
