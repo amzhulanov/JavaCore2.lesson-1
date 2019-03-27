@@ -1,6 +1,7 @@
 package ru.geekbrains.lesson1;
 
 import ru.geekbrains.lesson1.animal.Cat;
+import ru.geekbrains.lesson1.animal.Dog;
 import ru.geekbrains.lesson1.course.Course;
 import ru.geekbrains.lesson1.course.Cross;
 import ru.geekbrains.lesson1.course.Wall;
@@ -15,7 +16,9 @@ public class Application {
     public static void main(String[] args) {
         Team team = new Team(
                 new Cat("Барсик", Color.BLACK, 1, 100, 5),
-                new Cat("Барсик", Color.BLACK, 1, 80, 7)
+                new Cat("Барсик", Color.BLACK, 1, 80, 12),
+                new Dog("Дружок", Color.BLACK,5,150,3)
+
 
                 // TODO здесь должны быть участники всех видов (Cat, Dog, Human, Robot)
         );
