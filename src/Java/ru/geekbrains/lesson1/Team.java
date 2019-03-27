@@ -20,14 +20,26 @@ public class Team {
         return "Team{" +
                 "participants=" + Arrays.toString(participants) +
                 '}';
+
+
+    }
+
+    public void setParticipants(Participant[] participants) {
+        this.participants = participants;
     }
 
     public void ShowResult(){
-        System.out.println(toString());
+        System.out.println();
+
     }
 
     public void ShowTeam(){
-        System.out.println(toString());
+        Team s=new Team();
+        System.out.println(s.participants.length);
+         
+
+
+
     }
 
 
