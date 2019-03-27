@@ -1,7 +1,7 @@
-package Java.lesson1.animal;
+package Java.ru.geekbrains.lesson1.animal;
 
-import Java.lesson1.Participant;
-import Java.lesson1.enums.Color;
+import Java.ru.geekbrains.lesson1.Participant;
+import Java.ru.geekbrains.lesson1.enums.Color;
 
 public class Dog extends Animal implements Participant {
 

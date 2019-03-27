@@ -1,12 +1,12 @@
-package Java.lesson1;
+package Java.ru.geekbrains.lesson1;
 
-import Java.lesson1.animal.Cat;
-import Java.lesson1.animal.Dog;
-import Java.lesson1.course.Course;
-import Java.lesson1.course.Cross;
-import Java.lesson1.course.Wall;
-import Java.lesson1.course.Water;
-import Java.lesson1.enums.Color;
+import Java.ru.geekbrains.lesson1.animal.Cat;
+import Java.ru.geekbrains.lesson1.animal.Dog;
+import Java.ru.geekbrains.lesson1.course.Course;
+import Java.ru.geekbrains.lesson1.course.Cross;
+import Java.ru.geekbrains.lesson1.course.Wall;
+import Java.ru.geekbrains.lesson1.course.Water;
+import Java.ru.geekbrains.lesson1.enums.Color;
 
 /**
  * Класс для запуска приложения - симулятор кросса

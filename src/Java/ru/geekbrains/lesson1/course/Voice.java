@@ -1,6 +1,6 @@
-package Java.lesson1.course;
+package Java.ru.geekbrains.lesson1.course;
 
-import Java.lesson1.Participant;
+import Java.ru.geekbrains.lesson1.Participant;
 
 public class Voice extends Obstacle {
 

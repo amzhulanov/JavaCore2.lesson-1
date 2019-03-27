@@ -1,7 +1,7 @@
-package ru.geekbrains.lesson1.course;
+package Java.ru.geekbrains.lesson1.course;
 
-import ru.geekbrains.lesson1.Participant;
-import ru.geekbrains.lesson1.Team;
+import Java.ru.geekbrains.lesson1.Participant;
+import Java.ru.geekbrains.lesson1.Team;
 
 /**
  * Класс - полоса препятствий

@@ -1,4 +1,4 @@
-package Java.lesson1;
+package Java.ru.geekbrains.lesson1;
 
 /**
  * Интерфейс - участник соревнований
