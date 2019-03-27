@@ -28,20 +28,28 @@ public class Team {
         this.participants = participants;
     }
 
-    public void ShowResult(){
-        System.out.println();
+    public void showResult(){
+        System.out.println("Победитель в соревнованиях:");
+
+        for (int i=0;i<participants.length;i++) {
+            if (participants[i].isOnDistance()) {
+                System.out.println(participants[i]);
+            }
+        }
 
     }
 
-    public void ShowTeam(){
-        Team s=new Team();
-        System.out.println(s.participants.length);
-         
+    public void showTeam(){
+        System.out.println("Наша команда:");
+        for (int i=0;i<participants.length;i++) {
+            System.out.println(participants[i]);
+        }
+
+
 
 
 
     }
-
 
 
     public Participant[] getParticipants() {
